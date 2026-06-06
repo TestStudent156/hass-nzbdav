@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "ssl": "SSL verwenden",
+          "api_key": "API-Schlüssel",
+          "verify_ssl": "SSL-Zertifikat prüfen"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "invalid_auth": "Ungültiger API-Schlüssel"
+    },
+    "abort": {
+      "already_configured": "Dieser NZBDav-Server ist bereits konfiguriert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": { "scan_interval": "Aktualisierungsintervall (Sekunden)" }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": { "name": "Status" },
+      "download_speed": { "name": "Downloadgeschwindigkeit" },
+      "queue_items": { "name": "Warteschlange" },
+      "remaining_size": { "name": "Verbleibende Größe" },
+      "total_size": { "name": "Gesamtgröße" },
+      "time_left": { "name": "Verbleibende Zeit" },
+      "history_count": { "name": "Verlauf" },
+      "failed_count": { "name": "Fehlgeschlagen" },
+      "version": { "name": "Version" },
+      "disk_free": { "name": "Freier Speicher" }
+    },
+    "binary_sensor": {
+      "connectivity": { "name": "Verbindung" }
+    }
+  }
+}

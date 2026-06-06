@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "ssl": "Use SSL",
+          "api_key": "API key",
+          "verify_ssl": "Verify SSL certificate"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid API key"
+    },
+    "abort": {
+      "already_configured": "This NZBDav server is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": { "scan_interval": "Update interval (seconds)" }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": { "name": "Status" },
+      "download_speed": { "name": "Download speed" },
+      "queue_items": { "name": "Queue items" },
+      "remaining_size": { "name": "Remaining size" },
+      "total_size": { "name": "Total queue size" },
+      "time_left": { "name": "Time left" },
+      "history_count": { "name": "History count" },
+      "failed_count": { "name": "Failed count" },
+      "version": { "name": "Version" },
+      "disk_free": { "name": "Disk free" }
+    },
+    "binary_sensor": {
+      "connectivity": { "name": "Connectivity" }
+    }
+  }
+}
