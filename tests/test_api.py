@@ -1,6 +1,9 @@
 """Tests for the NZBDav API client."""
 from __future__ import annotations
 
+from unittest.mock import patch
+
+import aiohttp
 import pytest
 from aioresponses import aioresponses
 
@@ -12,11 +15,19 @@ from custom_components.nzbdav.api import (
 
 
 @pytest.fixture
-def client(hass):
-    return NzbDavClient(
-        hass=hass, host="1.2.3.4", port=3000, ssl=False,
-        api_key="KEY", verify_ssl=True,
-    )
+async def client(hass):
+    """Return a client backed by a real aiohttp session (not HA-managed)."""
+    session = aiohttp.ClientSession()
+    with patch(
+        "custom_components.nzbdav.api.async_get_clientsession",
+        return_value=session,
+    ):
+        c = NzbDavClient(
+            hass=hass, host="1.2.3.4", port=3000, ssl=False,
+            api_key="KEY", verify_ssl=True,
+        )
+    yield c
+    await session.close()
 
 
 async def test_get_data_success(client):

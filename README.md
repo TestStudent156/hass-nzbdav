@@ -6,7 +6,7 @@ server via its SABnzbd-compatible API.
 ## Installation (HACS)
 
 1. HACS → ⋮ → **Custom repositories**.
-2. Add `https://github.com/<OWNER>/hass-nzbdav` with category **Integration**.
+2. Add `https://github.com/TestStudent156/hass-nzbdav` with category **Integration**.
 3. Install **NZBDav**, then restart Home Assistant.
 4. Settings → Devices & Services → **Add Integration** → **NZBDav**.
 
